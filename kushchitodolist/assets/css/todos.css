@@ -16,6 +16,10 @@ ul{
     padding: 0;
 }
 
+body{
+    font-family: Roboto;
+}
+
 h1 {
     background: #2980b9;  /*blue color. don't know how to select that but it doesn't matter*/
     margin: 0;
