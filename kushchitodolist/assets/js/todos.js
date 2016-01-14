@@ -7,6 +7,6 @@ $("li").click(function(){
 });
 
 $("span").click(function(event){
-    $(this).parent().fadeOut();
+    $(this).parent().fadeOut(600);
     event.stopPropagation();
 });
