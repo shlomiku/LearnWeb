@@ -24,5 +24,4 @@ app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
 
-
-# located here http://kushchitodolist.appspot.com/
+# located here http://pantanal-photo-gallery.appspot.com/
