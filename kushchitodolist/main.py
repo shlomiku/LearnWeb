@@ -14,15 +14,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2
+import os
+from google.appengine.ext import webapp
+from google.appengine.ext.webapp import util
+from google.appengine.ext.webapp import template
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Hello world!')
+class MainHandler(webapp.RequestHandler):
+    def get(self, q):
+        if q is None:
+            q = 'index.html'
 
-app = webapp2.WSGIApplication([
-    ('/', MainHandler)
-], debug=True)
+        path = os.path.join(os.path.dirname(__file__), q)
+        self.response.headers['Content-Type'] = 'text/html'
+        self.response.out.write(template.render(path, {}))
 
+
+def main():
+    application = webapp.WSGIApplication([('/(.*html)?', MainHandler)], debug=False)
+    util.run_wsgi_app(application)
+
+if __name__ == '__main__':
+    main()
 
 # located here http://kushchitodolist.appspot.com/
