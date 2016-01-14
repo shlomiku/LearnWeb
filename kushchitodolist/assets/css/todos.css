@@ -70,8 +70,10 @@ span {
     transition: 0.2s;
     text-align: center;
     margin-right: 10px;
+    opacity: 0;
 }
 
 li:hover span{
     width: 40px;
+    opacity: 1;
 }
