@@ -22,6 +22,9 @@ body {
 
 li {
     background: white;
+    height: 40px;
+    line-height: 40px;
+
 }
 li:nth-child(2n){
     background: #f7f7f7;
@@ -37,3 +40,10 @@ h1 {
     color: white;
 }
 
+input {
+    color: #2980b9;
+    font-size: 18px;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box; /*note: this is for making the size of th input exactly inside the container. the width does not include padding*/
+}
