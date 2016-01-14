@@ -47,3 +47,8 @@ input {
     padding: 13px 13px 13px 20px;
     box-sizing: border-box; /*note: this is for making the size of th input exactly inside the container. the width does not include padding*/
 }
+input:focus{
+    background: white;
+    border: 3px solid #2980b9;
+    outline: none;
+}
