@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>AngularJS First Application</title>
+</head>
+
+<body>
+<h1>Sample Two way binding Application</h1>
+
+<div ng-app = ""> <!--only relevant when we define a module in the js file-->
+    <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+    <p>using "input" in the line above creates the input box. using the ng-model puts everything the user types in an<br/>
+    angular variable named "name". now when we use ng-bind we create the 2 way bind, which updates the text <br/> while we
+    type.</p>
+    <p>Hello <span ng-bind = "name"></span>!</p>
+</div>
+
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+</body>
+</html>
