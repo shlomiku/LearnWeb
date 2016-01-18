@@ -9,6 +9,20 @@ var app = angular.module("computer", ["ngRoute"])
     when("/main", {
         templateUrl: "main.html",
         controller: "MainCtrl"
+    }).
+    when("/about", {
+        templateUrl: "about.html",
+        controller: "MainCtrl"
+    })
+    .
+    when("/services", {
+        templateUrl: "services.html",
+        controller: "MainCtrl"
+    })
+    .
+    when("/contact", {
+        templateUrl: "contact.html",
+        controller: "MainCtrl"
     })
     .otherwise({
         redirectTo: '/main'
