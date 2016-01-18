@@ -94,3 +94,9 @@ img {
 .service {
  padding-top: 15px;
 }
+
+#contact_table{
+    width: 80%;
+    text-align: left;
+    font-size: 20px;
+}
