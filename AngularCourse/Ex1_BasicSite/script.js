@@ -9,9 +9,11 @@ var app = angular.module("computer", ["ngRoute"])
     when("/main", {
         templateUrl: "main.html",
         controller: "MainCtrl"
+    })
+    .otherwise({
+        redirectTo: '/main'
     });
-        //.otherwise({redirectTo: '/main'});
-}])
-.controller("MainCtrl", [function(){
+}]);
+app.controller("MainCtrl", [function(){
     console.log("that is progress");
 }]);
