@@ -16,8 +16,3 @@ app.config(['$routeProvider', function($routeProvider) {
     otherwise({redirectTo: '/templates'});
 }]);
 
-app.controller('TemplatesCtrl', ['$scope', '$http', function($scope, $http){
-    $http.get('json/templates.json').success(function(response){
-        $scope.templates = response
-    });
-}])

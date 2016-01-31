@@ -15,9 +15,15 @@ app.config(["$routeProvider", function($routeProvider){
     })
 }]);
 
-app.controller('TemplatesCtrl', ['$scope', function($scope){
-    console.log("Success");
-    console.log($scope);
-}])
-app.controller('TemplateDetailsCtrl', ['$scope', function($scope){
+app.controller('TemplatesCtrl', ['$scope', '$http', function($scope, $http){
+    $http.get('json/templates.json').success(function(response){
+        $scope.templates = response;
+    });
+}]);
+app.controller('TemplateDetailsCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+    $http.get('json/templates.json').success(function(response){
+        $scope.templates = response;
+        $scope.templateId = $routeParams.templateId; /*got it from the route provider config*/
+
+    });
 }])

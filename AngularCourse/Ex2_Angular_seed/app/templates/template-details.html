@@ -1,16 +1,20 @@
 <div class="row my-pic">
-    <h4>Title</h4>
-    <img src="img/1.jpg">
+    <h4>{{templates[templateId].name}}</h4>
+    <div class="col-lg-8 md-8">
+        <img src="img/{{templates[templateId].images[0].name}}">
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <br/>
+        <p>{{templates[templateId].description}}</p>
+        <p>{{templates[templateId].price| currency}}</p>
+        <h3>Buy It Now</h3>
+    </div>
 </div>
 <div class="row">
     <div class="col-md-8">
         <br/>
-        <p>The navbar collapses into its vertical mobile view when the viewport is narrower than
-            @grid-float-breakpoint, and expands into its horizontal non-mobile view when the
-            viewport is at least @grid-float-breakpoint in width. Adjust this variable in the
-            Less source to control when the navbar collapses/expands. The default value is 768px
-            (the smallest "small" or "tablet" screen).
-        </p>
+        <p>{{templates[templateId].description}}</p>
+        <p>{{templates[templateId].price| currency}}</p>
         <h3>Buy It Now</h3>
     </div>
 </div>
