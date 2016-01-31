@@ -24,6 +24,11 @@ app.controller('TemplateDetailsCtrl', ['$scope', '$http', '$routeParams', functi
     $http.get('json/templates.json').success(function(response){
         $scope.templates = response;
         $scope.templateId = $routeParams.templateId; /*got it from the route provider config*/
+        $scope.mainImage = $scope.templates[$scope.templateId].images[0].name;
 
     });
+    $scope.setImage = function(image){
+        $scope.mainImage = image.name;
+    }
 }])
+
