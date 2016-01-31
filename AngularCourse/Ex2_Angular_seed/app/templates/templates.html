@@ -1,8 +1,8 @@
 <div class="row my-pic">
     <div class="col-md-4">
         <h3>pic</h3>
-        <img src="img/1.jpg">
-        <h4>$19.99</h4>
-        <a class="btn btn-primary btn-block" href="#/templates/1">Details</a>
+        <img src="img/{{templates[0].images[0].name}}">
+        <h4>{{templates[0].price | currency}}</h4>
+        <a class="btn btn-primary btn-block" href="#/templates/{{templates[0].id}}">Details</a>
     </div>
 </div>

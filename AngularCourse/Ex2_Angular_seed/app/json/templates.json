@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Jaguar1",
+    "description": "Brazil 2013, Pantanal",
+    "type": "jpg",
+    "price": 9.99,
+    "images": [
+      {
+        "name": "1.jpg"
+      },
+      {
+        "name": "2.jpg"
+      },
+      {
+        "name": "3.jpg"
+      },
+      {
+        "name": "7.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jaguar2",
+    "description": "Brazil 2013, Pantanal",
+    "type": "jpg",
+    "price": 19.99,
+    "images": [
+      {
+        "name": "9.jpg"
+      }
+    ]
+  }
+]
