@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block head_title %}{% endblock head_title%}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    {%  block document_head %}
+
+    {% endblock document_head %}
+</head>
+<body>
+
+{% if messages %}
+<ul id="messages">
+    {% for m in messages %}
+    <li {% if m.tags %} class="{{ m.tags }}" {% endif %}>{{ m }}</li>
+    {% endfor %}
+</ul>
+<script>
+    setTimeout(function(){document.getElementById("messages").style.visibility='hidden';}, 3000);
+</script>
+{% endif %}
+<div class="container">
+    {%  block content %}
+
+    {% endblock content %}
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+<style>
+
+
+</style>
