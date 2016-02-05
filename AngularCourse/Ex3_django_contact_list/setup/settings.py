@@ -26,7 +26,7 @@ DEBUG = True
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "contact_list", "templates")],
+        'DIRS': [os.path.join(BASE_DIR, "contact_list", "static", "templates").replace('\\','/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -38,6 +38,10 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, "contact_list", "static", "templates").replace('\\','/'),
+)
 
 
 ALLOWED_HOSTS = []
@@ -101,7 +105,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "contact_list", "static"),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
