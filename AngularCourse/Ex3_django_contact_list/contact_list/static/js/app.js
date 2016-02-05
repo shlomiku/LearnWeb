@@ -11,23 +11,23 @@ var app = angular.module('contactList', [
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when('/', {
-        templateUrl: 'static/templates/partials/list.html',
+        templateUrl: 'static/templates/partials/contacts.html',
         controller: 'ListCtrl'
     }).
     otherwise({redirectTo: '/templates'});
 }]);
 
 app.controller('ListCtrl', ['$scope', function($scope){
-    $scope.templates = [
+    $scope.contacts = [
         {
-            "name": "hello",
-            "price": 9.99,
-            "id": 1
+            "first": "Shlomi",
+            "last": "kushchi",
+            "email": "shlomi@somewhere.com"
         },
         {
-            "name": "hello2",
-            "price": 19.99,
-            "id": 2
+            "first": "ravid",
+            "last": "asher",
+            "email": "ravid@somewhere.com"
         }
     ];
 }]);

@@ -1,0 +1,22 @@
+<div class="row" ng-controller="ListCtrl">
+    <div class="col-md-11 col-lg-11">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr ng-repeat="contact in contacts">
+                <td>{{contact.first}}</td>
+                <td>{{contact.last }}</td>
+                <td>{{contact.email}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
