@@ -11,7 +11,7 @@
             <tbody>
             <tr>
             </tr>
-            <tr ng-repeat="contact in contacts">
+            <tr ng-repeat="contact in contacts" data-toggle="modal" data-target="#myModal" ng-click='expandInformation(this.contact)'>
                 <td>{{contact.first}}</td>
                 <td>{{contact.last }}</td>
                 <td>{{contact.email}}</td>
@@ -21,5 +21,30 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
         <button type="button" class="button btn-success btn-lg">+</button>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Contact Information</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <tr>
+                        <td>{{contact.last}}</td>
+                        <td>{{contact.last}}</td>
+                        <td>{{contact.email}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>

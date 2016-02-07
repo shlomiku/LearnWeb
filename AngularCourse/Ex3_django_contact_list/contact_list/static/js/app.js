@@ -14,7 +14,7 @@ app.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'static/templates/partials/contacts.html',
         controller: 'ListCtrl'
     }).
-    otherwise({redirectTo: '/templates'});
+    otherwise({redirectTo: '/'});
 }]);
 
 app.controller('ListCtrl', ['$scope', function($scope){
@@ -30,5 +30,9 @@ app.controller('ListCtrl', ['$scope', function($scope){
             "email": "ravid@somewhere.com"
         }
     ];
+    $scope.expandInformation = function(elem){
+        elem.last = "kushchi";
+        console.log("OK");
+        console.log(elem);
+    };
 }]);
-
