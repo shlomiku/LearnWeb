@@ -30,9 +30,15 @@ app.controller('ListCtrl', ['$scope', function($scope){
             "email": "ravid@somewhere.com"
         }
     ];
+    $scope.fShowForm = false;
     $scope.expandInformation = function(elem){
         elem.last = "kushchi";
         console.log("OK");
         console.log(elem);
+    };
+
+    $scope.addContactForm = function(){
+        console.log("InHere");
+        $scope.fShowForm = true;
     };
 }]);
