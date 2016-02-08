@@ -11,13 +11,13 @@ var app = angular.module('contactList', [
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when('/', {
-        templateUrl: 'static/templates/partials/contacts.html',
+        templateUrl: 'static/templates/ngviews/contacts.html',
         controller: 'ListCtrl'
     }).
     otherwise({redirectTo: '/'});
 }]);
 
-app.controller('ListCtrl', ['$scope', function($scope){
+app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
     $scope.contacts = [
         {
             "first": "Shlomi",
@@ -40,5 +40,16 @@ app.controller('ListCtrl', ['$scope', function($scope){
     $scope.addContactForm = function(){
         console.log("InHere");
         $scope.fShowForm = true;
+    };
+
+    $scope.master = {firstName:"John", lastName:"Doe"};
+    $scope.reset = function(){
+        $scope.user = angular.copy($scope.master);
+    };
+    $scope.reset();
+    $scope.submitContact = function(){
+        console.log($scope.user.firstName);
+        $http.post("/submit/", JSON.stringify({"hello": "to you"}))
+
     };
 }]);
