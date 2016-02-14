@@ -57,7 +57,7 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
 
     $scope.submitContact = function(){
         console.log($scope.user.firstName);
-        $http.post("/submit/", JSON.stringify({"hello": "to you"}))
+        $http.post("/submit/", JSON.stringify($scope.user))
         $scope.closeForm();
         $scope.contacts.push(
             {
@@ -66,6 +66,7 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
                 "email": $scope.user.email
             }
         );
+        $scope.reset();
     };
     $scope.closeForm = function(){
         normalButtonState();
