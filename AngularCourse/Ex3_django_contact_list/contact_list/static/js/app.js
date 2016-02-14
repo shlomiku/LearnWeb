@@ -54,10 +54,18 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
         $scope.user = angular.copy($scope.master);
     };
     $scope.reset();
+
     $scope.submitContact = function(){
         console.log($scope.user.firstName);
         $http.post("/submit/", JSON.stringify({"hello": "to you"}))
         $scope.closeForm();
+        $scope.contacts.push(
+            {
+                "first": $scope.user.firstName,
+                "last": $scope.user.lastName,
+                "email": $scope.user.email
+            }
+        );
     };
     $scope.closeForm = function(){
         normalButtonState();
