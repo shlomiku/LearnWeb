@@ -49,7 +49,7 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
         addFormButtonState();
     };
 
-    $scope.master = {firstName:"John", lastName:"Doe"};
+    $scope.master = {firstName:"John", lastName:"Doe", email:""};
     $scope.reset = function(){
         $scope.user = angular.copy($scope.master);
     };
