@@ -18,6 +18,15 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
+    var addFormButtonState = function(){
+        $scope.fShowForm = true;
+        $scope.fShowPlusButton = false;
+    }
+
+    var normalButtonState = function(){
+        $scope.fShowForm = false;
+        $scope.fShowPlusButton = true;
+    }
     $scope.contacts = [
         {
             "first": "Shlomi",
@@ -30,16 +39,14 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
             "email": "ravid@somewhere.com"
         }
     ];
-    $scope.fShowForm = false;
+    //$scope.fShowForm = false;
+    normalButtonState();
     $scope.expandInformation = function(elem){
         elem.last = "kushchi";
-        console.log("OK");
-        console.log(elem);
     };
 
     $scope.addContactForm = function(){
-        console.log("InHere");
-        $scope.fShowForm = true;
+        addFormButtonState();
     };
 
     $scope.master = {firstName:"John", lastName:"Doe"};
@@ -50,6 +57,9 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
     $scope.submitContact = function(){
         console.log($scope.user.firstName);
         $http.post("/submit/", JSON.stringify({"hello": "to you"}))
-
+        $scope.closeForm();
+    };
+    $scope.closeForm = function(){
+        normalButtonState();
     };
 }]);
