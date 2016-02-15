@@ -21,25 +21,31 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
     var addFormButtonState = function(){
         $scope.fShowForm = true;
         $scope.fShowPlusButton = false;
-    }
+    };
 
     var normalButtonState = function(){
         $scope.fShowForm = false;
         $scope.fShowPlusButton = true;
-    }
-    $scope.contacts = [
-        {
-            "first": "Shlomi",
-            "last": "kushchi",
-            "email": "shlomi@somewhere.com"
-        },
-        {
-            "first": "ravid",
-            "last": "asher",
-            "email": "ravid@somewhere.com"
-        }
-    ];
-    //$scope.fShowForm = false;
+    };
+    var getCurrentUserList = function(){
+        $http.get('/user_list').success(function(data){
+            $scope.contacts = data;
+        });
+    };
+    getCurrentUserList();
+    //$scope.contacts = [
+    //    {
+    //        "first": "Shlomi",
+    //        "last": "kushchi",
+    //        "email": "shlomi@somewhere.com"
+    //    },
+    //    {
+    //        "first": "ravid",
+    //        "last": "asher",
+    //        "email": "ravid@somewhere.com"
+    //    }
+    //];
+    $scope.fShowForm = false;
     normalButtonState();
     $scope.expandInformation = function(elem){
         elem.last = "kushchi";
@@ -59,14 +65,15 @@ app.controller('ListCtrl', ['$scope', '$http', function($scope, $http){
         console.log($scope.user.firstName);
         $http.post("/submit/", JSON.stringify($scope.user))
         $scope.closeForm();
-        $scope.contacts.push(
-            {
-                "first": $scope.user.firstName,
-                "last": $scope.user.lastName,
-                "email": $scope.user.email
-            }
-        );
+        //$scope.contacts.push(
+        //    {
+        //        "first": $scope.user.firstName,
+        //        "last": $scope.user.lastName,
+        //        "email": $scope.user.email
+        //    }
+        //);
         $scope.reset();
+        getCurrentUserList();
     };
     $scope.closeForm = function(){
         normalButtonState();
