@@ -1,0 +1,10 @@
+// create by "firebase init" in root directory
+{
+  "firebase": "kushchi-contact-list",
+  "public": "static_cdn",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
