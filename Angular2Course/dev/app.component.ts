@@ -6,8 +6,8 @@ import {MyComponentComponent} from "./my-component.component";
     template: `
         <h1>Angular 2 Boilerplate</h1>
         <p>Hello World!</p>
-        second component
-        <my-componet></my-componet>
+        second component:
+        <my-component></my-component>
     `,
     directives: [MyComponentComponent]
 })
