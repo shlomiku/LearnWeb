@@ -20,6 +20,10 @@ import {Component} from 'angular2/core'
     <input type="text" #inputElement (keyup)="0"> <!--# is a new angular2 way to define and attach a variable-->
     <!--the () with keyup is a way to attach and event (in this case it's the keyup) to our element.-->
     <!--the only reason we do this is - the GUI is updated when an event is triggered. so we attach it to an event to create an event-->
+
+    <br>
+    <br>
+    <button type="button" [disabled]='inputElement.value!== "yes"'>This will only be enabled when input is yes</button>
     `,
     styleUrls: ['src/css/mycomponent.css']
 })
