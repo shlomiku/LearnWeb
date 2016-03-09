@@ -2,6 +2,7 @@
  * Created by Admin on 02/03/2016.
  */
 import {Component} from 'angular2/core'
+import {TestComponent} from "./test.component";
 
 
 @Component({
@@ -25,8 +26,12 @@ import {Component} from 'angular2/core'
     <br>
     <br>
     <button type="button" [disabled]='inputElement.value!== "yes"'>This will only be enabled when input is yes</button>
+    <br>
+    <br>
+    <test-component></test-component>
     `,
-    styleUrls: ['src/css/mycomponent.css']
+    styleUrls: ['src/css/mycomponent.css'],
+    directives: [TestComponent]
 })
 export class MyComponentComponent {
     name = "Shlomi";
