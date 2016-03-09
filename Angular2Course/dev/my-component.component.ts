@@ -14,7 +14,8 @@ import {Component} from 'angular2/core'
     <script>
     console.log(inputElement.value)
     </script>
-    Hi my name is <span [style.color]="inputElement.value==='yes' ? 'blue' : ''">{{name}}</span>. it's my first dom <span [class.is-awesome]="inputElement.value === 'yes'">manipulation</span>.
+    Hi my name is <span [style.color]="inputElement.value==='yes' ? 'blue' : ''">{{name}}</span>. <!--manipulte style with angular2 attribute and a one liner if statement-->
+    it's my first dom <span [class.is-awesome]="inputElement.value === 'yes'">manipulation</span>. <!--class attribute to attach a class to our DOM-->
     <br>
     <br>
     <input type="text" #inputElement (keyup)="0"> <!--# is a new angular2 way to define and attach a variable-->
