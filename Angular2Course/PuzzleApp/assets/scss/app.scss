@@ -1,6 +1,132 @@
 body {
-  padding: 32px;
-  margin: 32px;
-  font-family: "Roboto", Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Merriweather Sans", "Roboto", Arial, sans-serif;
   font-size: 16px;
 }
+
+.main {
+  margin: 10px 6%;
+  padding: 10px;
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  background-color: #bdc3c7;
+  padding: 20px;
+
+  h2 {
+    font-size: 20px;
+    color: #8a8a8a;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #2c3e50;
+  }
+
+  a {
+    color: #7f8c8d;
+  }
+}
+
+.category-selection {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 20px;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    border-bottom: 1px solid white;
+  }
+
+  .image img {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto
+  }
+}
+
+
+.cat-complete {
+  background-color: #68cc8b !important;
+}
+
+.cat-complete:hover {
+  background-color: #2ecc71;
+}
+
+.cat-introduction {
+  background-color: #6daddb !important;
+}
+
+.cat-introduction:hover {
+  background-color: #3498db;
+}
+
+.cat-directives {
+  background-color: #ab80b6 !important;
+}
+
+.cat-directives:hover {
+  background-color: #9b59b6;
+}
+
+.cat-forms {
+  background-color: #59bca6 !important;
+}
+
+.cat-forms:hover {
+  background-color: #1abc9c;
+}
+
+.cat-routing {
+  background-color: #e6a765 !important;
+}
+
+.cat-routing:hover {
+  background-color: #e67e22;
+}
+
+.cat-http {
+  background-color: #e78a7f !important;
+}
+
+.cat-http:hover {
+  background-color: #e74c3c;
+}
+
+.cat-other {
+  background-color: #6a8db9 !important;
+}
+
+.cat-other:hover {
+  background-color: #2980b9;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main {
+    margin: 20px 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main {
+    margin: 10px 5%;
+  }
+}
+
