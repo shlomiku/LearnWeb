@@ -7,7 +7,7 @@ import {Component} from 'angular2/core';
         <section class="setup">
             Enter your name: <input type="text" #name (keyup)="0">
         </section>
-        <section [style.display]="name.value === '' ? 'none' : 'block'">
+        <section [ngStyle]="{display: name.value === '' ? 'none' : 'block'}">
             <h2>The Puzzle</h2>
             <p>Welcome <span class="name">XXX</span></p>
             <br>
