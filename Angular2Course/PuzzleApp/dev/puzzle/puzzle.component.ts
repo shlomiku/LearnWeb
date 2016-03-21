@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {OnInit} from 'angular2/core';
 
 
 @Component({
@@ -7,7 +8,11 @@ import {Component} from 'angular2/core';
         <section class="setup">
             Enter your name: <input type="text" #name (keyup)="0">
         </section>
-        <section [ngStyle]="{display: name.value === '' ? 'none' : 'block'}">
+        <section
+        [ngClass]="{
+        puzzle: true,
+        solved: swtich1Number == switch1.value
+        }"
         [ngStyle]="{display: name.value === '' ? 'none' : 'block'}">
             <h2>The Puzzle</h2>
             <p>Welcome <span class="name">XXX</span></p>
