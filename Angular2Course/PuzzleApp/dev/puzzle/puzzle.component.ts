@@ -20,6 +20,16 @@ import {Component} from 'angular2/core';
         </section>
     `
 })
-export class PuzzleComponent{
-
+export class PuzzleComponent implements OnInit{
+    ngOnInit():any {
+        this.swtich1Number = Math.round(Math.random());
+        this.swtich2Number = Math.round(Math.random());
+        this.swtich3Number = Math.round(Math.random());
+        this.swtich4Number = Math.round(Math.random());
+        console.log(this.swtich1Number, this.swtich2Number, this.swtich3Number, this.swtich4Number)
+    }
+    swtich1Number: number;
+    swtich2Number: number;
+    swtich3Number: number;
+    swtich4Number: number;
 }
