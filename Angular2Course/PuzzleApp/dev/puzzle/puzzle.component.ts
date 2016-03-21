@@ -11,7 +11,7 @@ import {OnInit} from 'angular2/core';
         <section
         [ngClass]="{
         puzzle: true,
-        solved: swtich1Number == switch1.value
+        solved: switch1Number == switch1.value
         }"
         [ngStyle]="{display: name.value === '' ? 'none' : 'block'}">
             <h2>The Puzzle</h2>
@@ -21,20 +21,20 @@ import {OnInit} from 'angular2/core';
             Switch2: <input type="text" (keyup)="0" #switch2><br>
             Switch3: <input type="text" (keyup)="0" #switch3><br>
             Switch4: <input type="text" (keyup)="0" #switch4><br>
-            <h4>Great {{name.value}} you did it!</h4>
+            <h4 [hidden]="switch1Number === switch1.value ">Great {{name.value}} you did it!</h4>
         </section>
     `
 })
 export class PuzzleComponent implements OnInit{
     ngOnInit():any {
-        this.swtich1Number = Math.round(Math.random());
-        this.swtich2Number = Math.round(Math.random());
-        this.swtich3Number = Math.round(Math.random());
-        this.swtich4Number = Math.round(Math.random());
-        console.log(this.swtich1Number, this.swtich2Number, this.swtich3Number, this.swtich4Number)
+        this.switch1Number = Math.round(Math.random());
+        this.switch2Number = Math.round(Math.random());
+        this.switch3Number = Math.round(Math.random());
+        this.switch4Number = Math.round(Math.random());
+        console.log(this.switch1Number, this.switch2Number, this.switch3Number, this.switch4Number)
     }
-    swtich1Number: number;
-    swtich2Number: number;
-    swtich3Number: number;
-    swtich4Number: number;
+    switch1Number: number;
+    switch2Number: number;
+    switch3Number: number;
+    switch4Number: number;
 }

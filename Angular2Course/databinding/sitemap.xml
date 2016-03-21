@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://angular2-tutorials.com/</loc>
+  <lastmod>2016-03-10T07:53:07+00:00</lastmod>
+</url>
+<url>
+	<loc>http://angular2-tutorials.com/complete</loc>
+</url>	
+<url>
+	<loc>http://angular2-tutorials.com/introduction</loc>
+</url>	
+<url>
+	<loc>http://angular2-tutorials.com/directives</loc>
+</url>	
+<url>
+	<loc>http://angular2-tutorials.com/forms</loc>
+</url>	
+<url>
+	<loc>http://angular2-tutorials.com/routing</loc>
+</url>	
+<url>
+	<loc>http://angular2-tutorials.com/http</loc>
+</url>	
+<url>
+	<loc>http://angular2-tutorials.com/other</loc>
+</url>	
+</urlset>
