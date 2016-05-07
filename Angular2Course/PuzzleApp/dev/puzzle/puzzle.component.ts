@@ -11,7 +11,7 @@ import {OnInit} from 'angular2/core';
         <section
         [ngClass]="{
         puzzle: true,
-        solved: switch1Number == switch1.value
+        solved: switch1Number == switch1.value && switch2Number == switch2.value
         }"
         [ngStyle]="{display: name.value === '' ? 'none' : 'block'}">
             <h2>The Puzzle</h2>
@@ -21,12 +21,12 @@ import {OnInit} from 'angular2/core';
             Switch2: <input type="text" (keyup)="0" #switch2><br>
             Switch3: <input type="text" (keyup)="0" #switch3><br>
             Switch4: <input type="text" (keyup)="0" #switch4><br>
-            <h4 [hidden]="switch1Number === switch1.value ">Great {{name.value}} you did it!</h4>
+            <h4 [hidden]="switch1Number != switch1.value || switch2Number != switch2.value" (keyup)="0">Great {{name.value}} you did it!</h4>
         </section>
     `
 })
 export class PuzzleComponent implements OnInit{
-    ngOnInit():any {
+    ngOnInit() {
         this.switch1Number = Math.round(Math.random());
         this.switch2Number = Math.round(Math.random());
         this.switch3Number = Math.round(Math.random());

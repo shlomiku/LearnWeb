@@ -1,10 +1,9 @@
 import {Component} from 'angular2/core';
-import {ContactComponent} from "./contact.component";
 
 @Component({
     selector: 'my-app',
     template: `
-        Loadinggg
+        Hello World: {{'Hey'}}
     `,
 })
 export class AppComponent {
