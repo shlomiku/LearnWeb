@@ -1,0 +1,4 @@
+/.idea
+*.pyc
+/src/
+/node_modules/
