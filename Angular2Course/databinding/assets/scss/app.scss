@@ -29,3 +29,26 @@ body {
 .name {
   font-weight: bold;
 }
+
+.my-box {
+  background: #eee;
+  border: 1px solid #ccc;
+  margin-buttom: 32px;
+  margin-top: 32px;
+  padding: 16px;
+}
+
+button {
+  cursor: default;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+button:not([disabled]):hover {
+  background-color: salmon;
+  color: white;
+}
