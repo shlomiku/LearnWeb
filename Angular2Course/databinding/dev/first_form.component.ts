@@ -17,12 +17,9 @@ import {EventEmitter} from "angular2/core";
         </div>
     </div>
     `,
-    // inputs: ['myself'],
-    outputs: ['submitted']
 })
 export class FirstForm{
     myself = {name: '', age: ''};
-    // myself: any;
     isFilled = false;
     isValid = false;
     submittedEvent = new EventEmitter<{name: string, age: string}>();
@@ -42,6 +39,7 @@ export class FirstForm{
         }
     };
     onSubmit() {
-           this.submittedEvent.emit(this.myself);
+        console.log("getting Started");
+        // this.submittedEvent.emit(this.myself); 
     };
 }

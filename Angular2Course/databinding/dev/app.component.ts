@@ -5,7 +5,7 @@ import {SecondForm} from "./second_form.component";
 @Component({
     selector: 'my-app',
     template: `
-        <first-form></first-form>
+        <first-form (submittedEvent)="onSubmit($event)"></first-form>
         <br>
         <second-form></second-form><br>
         <!--{{myself.name}}-->
@@ -14,7 +14,12 @@ import {SecondForm} from "./second_form.component";
     // outputs: ['myself']
 })
 export class AppComponent {
-    // myself = {name: 'asas', age: ''};
+    myself = {name: 'asas', age: ''};
     confirmed_myself = {name: '', age: ''};
+
+    onSubmit(myself: {name: string, age: string}){
+        console.log("getting there");
+        // console.log(myself);
+    };
 
 }
