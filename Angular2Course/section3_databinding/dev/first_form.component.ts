@@ -39,7 +39,7 @@ export class FirstForm{
         }
     };
     onSubmit() {
+        // this.submittedEvent.emit(this.myself);
         console.log("getting Started");
-        // this.submittedEvent.emit(this.myself); 
     };
 }
