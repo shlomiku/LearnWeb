@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {RecipeListComponent, RecipeDescriptionComponent} from './recipe-list';
+import {RecipeListComponent, RecipeDescriptionComponent, Recipe} from './recipe-list';
 
 @Component({
   moduleId: module.id,
@@ -8,7 +8,7 @@ import {RecipeListComponent, RecipeDescriptionComponent} from './recipe-list';
   directives: [RecipeListComponent, RecipeDescriptionComponent]
 })
 export class RecipesComponent implements OnInit {
-
+  selectedRecipe: Recipe;
   constructor() {}
 
   ngOnInit() {
