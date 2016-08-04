@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Recipe} from "../recipe-list";
+import {Recipe} from '../recipe-list';
 
 @Component({
   moduleId: module.id,
