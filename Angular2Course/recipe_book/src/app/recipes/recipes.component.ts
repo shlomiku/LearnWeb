@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {RecipeListComponent} from "./recipe-list/recipe-list.component";
+import {RecipeDescriptionComponent} from "./recipe-description/recipe-description.component";
 
 @Component({
   moduleId: module.id,
@@ -10,15 +12,17 @@ import { Component, OnInit } from '@angular/core';
       <span class="container">
       <span class="row">
       <span class="col-md-5">
-      Recipe List
+      <app-recipe-list></app-recipe-list>
 </span>
-<span class="col-md-7">Recipe Description</span>
+<span class="col-md-7">
+<app-recipe-description></app-recipe-description>
+</span>
       
 </span>
       
       </span>
   `,
-  styles: []
+  directives: [RecipeListComponent, RecipeDescriptionComponent]
 })
 export class RecipesComponent implements OnInit {
 
