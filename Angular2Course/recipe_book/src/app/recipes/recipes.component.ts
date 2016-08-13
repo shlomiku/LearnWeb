@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {RecipeListComponent} from "./recipe-list/recipe-list.component";
-import {RecipeDescriptionComponent} from "./recipe-description/recipe-description.component";
+import { RecipeListComponent } from "./recipe-list/recipe-list.component";
+import { RecipeDescriptionComponent } from "./recipe-description/recipe-description.component";
+import { SelectRecipeService } from "./select-recipe.service";
 
 @Component({
   moduleId: module.id,
@@ -10,25 +11,21 @@ import {RecipeDescriptionComponent} from "./recipe-description/recipe-descriptio
       recipes Works!
     </p>
       <span class="container">
-      <span class="row">
-      <span class="col-md-5">
-      <app-recipe-list></app-recipe-list>
-</span>
-<span class="col-md-7">
-<app-recipe-description></app-recipe-description>
-</span>
-      
-</span>
-      
+        <span class="row">
+          <span class="col-md-5">
+            <app-recipe-list></app-recipe-list>
+          </span>
+          <span class="col-md-7">
+            <app-recipe-description></app-recipe-description>
+          </span>
+        </span>
       </span>
   `,
-  directives: [RecipeListComponent, RecipeDescriptionComponent]
+  directives: [RecipeListComponent, RecipeDescriptionComponent],
+  providers: [SelectRecipeService]
 })
-export class RecipesComponent implements OnInit {
+export class RecipesComponent {
 
   constructor() {}
-
-  ngOnInit() {
-  }
 
 }

@@ -5,7 +5,6 @@ import {SelectRecipeService} from "../select-recipe.service";
   moduleId: module.id,
   selector: 'app-recipe-description',
   templateUrl: 'recipe-description.component.html',
-  styles: []
 })
 export class RecipeDescriptionComponent implements OnInit {
 
@@ -16,6 +15,8 @@ export class RecipeDescriptionComponent implements OnInit {
       recipe => this.onSelectRecipe(recipe)
     );
   }
-  onSelectRecipe(recipe) {};
+  onSelectRecipe(recipe) {
+    console.log(recipe)
+  };
 
 }

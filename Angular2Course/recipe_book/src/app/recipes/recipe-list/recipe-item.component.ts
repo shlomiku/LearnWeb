@@ -6,7 +6,7 @@ import {SelectRecipeService} from "../select-recipe.service";
   moduleId: module.id,
   selector: 'app-recipe-item',
   templateUrl: 'recipe-item.component.html',
-  providers: [SelectRecipeService],
+  providers: [],
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;

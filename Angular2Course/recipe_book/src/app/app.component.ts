@@ -10,4 +10,5 @@ import {RecipesComponent} from './recipes';
 })
 export class AppComponent {
   title = 'app works!';
+  constructor() {};
 }
