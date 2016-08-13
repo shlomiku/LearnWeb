@@ -1,3 +1,14 @@
-<p>
-  recipe-list works!
-</p>
+<div class="contaienr">
+  <div class="btn brn-success" (click)="onAddRecipe()">Add Recipe</div>
+  <ul class="list-group">
+    <app-recipe-item [recipe]="recipe" (click)="onSelectRecipe(recipe)"></app-recipe-item>
+  </ul>
+</div>
+<!--<ul>-->
+  <!--<li>-->
+    <!--item 1-->
+  <!--</li>-->
+  <!--<li>-->
+    <!--item 2-->
+  <!--</li>-->
+<!--</ul>-->
