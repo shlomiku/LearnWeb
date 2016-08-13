@@ -11,10 +11,12 @@ import {
 } from '@angular/core/testing';
 
 import { RecipeDescriptionComponent } from './recipe-description.component';
+import {SelectRecipeService} from "../select-recipe.service";
 
 describe('Component: RecipeDescription', () => {
   it('should create an instance', () => {
-    let component = new RecipeDescriptionComponent();
+
+    let component = new RecipeDescriptionComponent(new SelectRecipeService());
     expect(component).toBeTruthy();
   });
 });

@@ -1,5 +1,5 @@
+import {EventEmitter} from '@angular/core';
+import {Recipe} from "./recipe-list/recipe";
 export class SelectRecipeService {
-
-  constructor() {}
-
+  signalSelect = new EventEmitter<Recipe>();
 }

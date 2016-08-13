@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SelectRecipeService} from "../select-recipe.service";
 
 @Component({
   moduleId: module.id,
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeDescriptionComponent implements OnInit {
 
-  constructor() {}
+  constructor(private selectRecipeService: SelectRecipeService) {}
 
   ngOnInit() {
+    this.selectRecipeService.signalSelect.subscribe(
+      recipe => this.onSelectRecipe(recipe)
+    );
   }
+  onSelectRecipe(recipe) {};
 
 }
