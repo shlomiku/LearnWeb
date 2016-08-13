@@ -1,5 +1,5 @@
 <div class="contaienr">
-  <div class="btn brn-success" (click)="onAddRecipe()">Add Recipe</div>
+  <button class="btn btn-primary" (click)="onAddRecipe()">Add Recipe</button>
   <ul class="list-group">
     <app-recipe-item [recipe]="recipe" (click)="selectRecipe(recipe)"></app-recipe-item>
   </ul>

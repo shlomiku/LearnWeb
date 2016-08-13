@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SelectRecipeService} from "../select-recipe.service";
+import {Recipe} from "../recipe-list/recipe";
 
 @Component({
   moduleId: module.id,
@@ -7,7 +8,7 @@ import {SelectRecipeService} from "../select-recipe.service";
   templateUrl: 'recipe-description.component.html',
 })
 export class RecipeDescriptionComponent implements OnInit {
-
+  selectedRecipe: Recipe;
   constructor(private selectRecipeService: SelectRecipeService) {}
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class RecipeDescriptionComponent implements OnInit {
   }
   onSelectRecipe(recipe) {
     console.log(recipe);
+    this.selectedRecipe = recipe;
   };
 
 }
