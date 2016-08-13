@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
     <p>
       recipes Works!
     </p>
+      <span class="container">
+      <span class="row">
+      <span class="col-md-5">
+      Recipe List
+</span>
+<span class="col-md-7">Recipe Description</span>
+      
+</span>
+      
+      </span>
   `,
   styles: []
 })
