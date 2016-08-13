@@ -16,7 +16,7 @@ export class RecipeDescriptionComponent implements OnInit {
     );
   }
   onSelectRecipe(recipe) {
-    console.log(recipe)
+    console.log(recipe);
   };
 
 }

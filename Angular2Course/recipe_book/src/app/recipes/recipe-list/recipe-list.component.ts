@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RecipeItemComponent} from "./recipe-item.component";
 import {Recipe} from "./recipe";
+import {SelectRecipeService} from "../select-recipe.service";
 
 @Component({
   moduleId: module.id,
@@ -10,11 +11,17 @@ import {Recipe} from "./recipe";
 })
 export class RecipeListComponent implements OnInit {
 
-  constructor() {}
+  constructor(private recipeSelected: SelectRecipeService) {}
 
   ngOnInit() {
   }
 
   recipe = new Recipe('Dummy', 'Dummy', 'http://www.churchplanting.com/wp-content/uploads/2012/02/dummy-300x195.jpg');
 
+  onAddRecipe(){};
+
+  selectRecipe(recipe: Recipe) {
+    console.log(recipe);
+    this.recipeSelected.signalSelect.emit(recipe);
+  }
 }
